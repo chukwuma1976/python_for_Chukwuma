@@ -9,6 +9,10 @@ def print_all_lowercase(array):
     for word in array:
         print(word.lower())
 
+def print_all_reversed(array):
+    for word in array:
+        print(word[::-1])
+
 while word.lower() != "exit":
     word = input("Please enter a word to add to the array or enter \"exit\": ")
     if word.lower() != "exit": wordsarray.append(word)
@@ -20,13 +24,22 @@ for word in wordsarray:
 
 print("======================================================================================================")
 
+
 choice = None
 while choice != '0' :
-    choice = input("Enter the number 1 for ALL CAPS, number 2 for ALL LOWERCASE, or number 0 to exit: ")
+    choice = input(
+"""
+Enter: 
+    1 for ALL CAPS, 
+    2 for ALL LOWERCASE, 
+    3 for ALL REVERSED
+    OR 0 to exit: """)
     if choice == '1':
         print_all_caps(wordsarray)  
-    elif choice =='2': 
+    elif choice == '2': 
         print_all_lowercase(wordsarray)
+    elif choice == '3':
+        print_all_reversed(wordsarray)
     print("======================================================================================================")
 
 
